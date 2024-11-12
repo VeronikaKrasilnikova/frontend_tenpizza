@@ -1,0 +1,37 @@
+{
+  "name": "modsen-frontend",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "gen:client": "curl --silent -o api.yaml -w '%{http_code} %{url_effective}\n' http://localhost:8080/v3/api-docs.yaml && openapi-generator-cli generate -i api.yaml -g typescript-axios -o src/generated-client && rm api.yaml"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.10.3",
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.7.2",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-modal": "^3.16.1",
+    "react-responsive-modal": "^6.4.2",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@astrojs/node": "^8.3.1",
+    "@types/react-modal": "^3.16.3"
+  }
+}

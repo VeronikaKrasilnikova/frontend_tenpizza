@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/elements/Header';
+import MainPageUser from '../components/UserPages/MainPageUser';
+---
+
+<Layout title="Лучшие пиццы в Минске">
+  <Header client:load />
+  <MainPageUser client:load />
+</Layout>
